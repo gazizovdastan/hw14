@@ -64,18 +64,18 @@ class MyAlbumsViewController: UIViewController {
         [SectionModel(image: UIImage(named: "people"), title: "Люди", imageCount: "115"),
         SectionModel(image: UIImage(named: "place"), title: "Места", imageCount: "2")
         ],
-        [SectionModel(image: UIImage(systemName: "video"), title: "Видео", imageCount: "17"),
-         SectionModel(image: UIImage(systemName: "person.crop.square"), title: "Селфи", imageCount: "43"),
-         SectionModel(image: UIImage(systemName: "livephoto"), title: "Фото Live Photos", imageCount: "51"),
-         SectionModel(image: UIImage(systemName: "cube"), title: "Портреты", imageCount: "10"),
-         SectionModel(image: UIImage(systemName: "timelapse"), title: "Таймлапс", imageCount: "34"),
-         SectionModel(image: UIImage(systemName: "slowmo"), title: "Замедленно", imageCount: "12"),
-         SectionModel(image: UIImage(systemName: "camera.viewfinder"), title: "Снимки экрана", imageCount: "98"),
-         SectionModel(image: UIImage(systemName: "record.circle"), title: "Записи экрана", imageCount: "7")
+        [SectionModel(image: UIImage(systemName: "video"), title: "Видео", imageCount: "407"),
+         SectionModel(image: UIImage(systemName: "person.crop.square"), title: "Селфи", imageCount: "94"),
+         SectionModel(image: UIImage(systemName: "livephoto"), title: "Фото Live Photos", imageCount: "50"),
+         SectionModel(image: UIImage(systemName: "cube"), title: "Портреты", imageCount: "41"),
+         SectionModel(image: UIImage(systemName: "timelapse"), title: "Таймлапс", imageCount: "2"),
+         SectionModel(image: UIImage(systemName: "slowmo"), title: "Замедленно", imageCount: "1"),
+         SectionModel(image: UIImage(systemName: "camera.viewfinder"), title: "Снимки экрана", imageCount: "159"),
+         SectionModel(image: UIImage(systemName: "record.circle"), title: "Записи экрана", imageCount: "17")
         ],
         [SectionModel(image: UIImage(systemName: "square.and.arrow.down"), title: "Импортированные", imageCount: "165"),
-        SectionModel(image: UIImage(systemName: "eye.slash"), title: "Скрытые", imageCount: "0"),
-        SectionModel(image: UIImage(systemName: "trash"), title: "Недавно удаленные", imageCount: "5")
+        SectionModel(image: UIImage(systemName: "eye.slash"), title: "Скрытые", imageCount: "46"),
+        SectionModel(image: UIImage(systemName: "trash"), title: "Недавно удаленные", imageCount: "0")
         ]])
     }
 }
@@ -194,7 +194,7 @@ extension MyAlbumsViewController {
 
                 let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.46),
                                                        heightDimension: .fractionalWidth(1.2))
-                let group = NSCollectionLayoutGroup.vertical(layoutSize: groupSize, repeatingSubitem: item, count: 2)
+                let group = NSCollectionLayoutGroup.vertical(layoutSize: groupSize, subitem: item, count: 2)
                 
                 let section = NSCollectionLayoutSection(group: group)
                 section.contentInsets = NSDirectionalEdgeInsets(top: 10, leading: 10, bottom: 0, trailing: 0)
@@ -218,7 +218,7 @@ extension MyAlbumsViewController {
 
                 let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.92),
                                                        heightDimension: .fractionalWidth(0.6))
-                let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, repeatingSubitem: item, count: 2)
+                let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitem: item, count: 2)
                 let section = NSCollectionLayoutSection(group: group)
                 section.contentInsets = NSDirectionalEdgeInsets(top: 10, leading: 10, bottom: 0, trailing: 10)
                 section.orthogonalScrollingBehavior = .paging
@@ -239,7 +239,7 @@ extension MyAlbumsViewController {
 
                 let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0),
                                                        heightDimension: .absolute(44))
-                let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, repeatingSubitem: item, count: 1)
+                let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitem: item, count: 1)
                 let section = NSCollectionLayoutSection(group: group)
                 section.contentInsets = NSDirectionalEdgeInsets(top: 10, leading: 10, bottom: 10, trailing: 0)
                 let sectionHeaderSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1),
@@ -258,7 +258,7 @@ extension MyAlbumsViewController {
 
                 let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0),
                                                        heightDimension: .absolute(44))
-                let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, repeatingSubitem: item, count: 1)
+                let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitem: item, count: 1)
 
                 let section = NSCollectionLayoutSection(group: group)
                 section.contentInsets = NSDirectionalEdgeInsets(top: 10, leading: 10, bottom: 10, trailing: 0)
@@ -276,7 +276,7 @@ extension MyAlbumsViewController {
                 
                 let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1 / 2.2),
                                                        heightDimension: .fractionalWidth(1 / 1.8 * 2))
-                let layoutGroup = NSCollectionLayoutGroup.vertical(layoutSize: groupSize, repeatingSubitem: layoutItem, count: 2)
+                let layoutGroup = NSCollectionLayoutGroup.vertical(layoutSize: groupSize, subitem: layoutItem, count: 2)
                 layoutGroup.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 10, bottom: 0, trailing: 0)
                 let layoutSection = NSCollectionLayoutSection(group: layoutGroup)
                 layoutSection.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 10, bottom: 0, trailing: 10)
