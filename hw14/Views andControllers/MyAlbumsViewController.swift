@@ -61,7 +61,7 @@ class MyAlbumsViewController: UIViewController {
         SectionModel(image: UIImage(named: "lee"), title: "Брюс Ли", imageCount: "84"),
         SectionModel(image: UIImage(named: "ali"), title: "Мухаммад Али", imageCount: "13")
         ],
-        [SectionModel(image: UIImage(named: "people"), title: "Peoples", imageCount: "115"),
+        [SectionModel(image: UIImage(named: "people"), title: "Люди", imageCount: "115"),
         SectionModel(image: UIImage(named: "place"), title: "Места", imageCount: "2")
         ],
         [SectionModel(image: UIImage(systemName: "video"), title: "Видео", imageCount: "17"),
@@ -194,7 +194,7 @@ extension MyAlbumsViewController {
 
                 let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.46),
                                                        heightDimension: .fractionalWidth(1.2))
-                let group = NSCollectionLayoutGroup.vertical(layoutSize: groupSize, subitem: item, count: 2)
+                let group = NSCollectionLayoutGroup.vertical(layoutSize: groupSize, repeatingSubitem: item, count: 2)
                 
                 let section = NSCollectionLayoutSection(group: group)
                 section.contentInsets = NSDirectionalEdgeInsets(top: 10, leading: 10, bottom: 0, trailing: 0)
@@ -218,7 +218,7 @@ extension MyAlbumsViewController {
 
                 let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.92),
                                                        heightDimension: .fractionalWidth(0.6))
-                let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitem: item, count: 2)
+                let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, repeatingSubitem: item, count: 2)
                 let section = NSCollectionLayoutSection(group: group)
                 section.contentInsets = NSDirectionalEdgeInsets(top: 10, leading: 10, bottom: 0, trailing: 10)
                 section.orthogonalScrollingBehavior = .paging
@@ -239,7 +239,7 @@ extension MyAlbumsViewController {
 
                 let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0),
                                                        heightDimension: .absolute(44))
-                let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitem: item, count: 1)
+                let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, repeatingSubitem: item, count: 1)
                 let section = NSCollectionLayoutSection(group: group)
                 section.contentInsets = NSDirectionalEdgeInsets(top: 10, leading: 10, bottom: 10, trailing: 0)
                 let sectionHeaderSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1),
@@ -258,7 +258,7 @@ extension MyAlbumsViewController {
 
                 let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0),
                                                        heightDimension: .absolute(44))
-                let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitem: item, count: 1)
+                let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, repeatingSubitem: item, count: 1)
 
                 let section = NSCollectionLayoutSection(group: group)
                 section.contentInsets = NSDirectionalEdgeInsets(top: 10, leading: 10, bottom: 10, trailing: 0)
@@ -276,7 +276,7 @@ extension MyAlbumsViewController {
                 
                 let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1 / 2.2),
                                                        heightDimension: .fractionalWidth(1 / 1.8 * 2))
-                let layoutGroup = NSCollectionLayoutGroup.vertical(layoutSize: groupSize, subitem: layoutItem, count: 2)
+                let layoutGroup = NSCollectionLayoutGroup.vertical(layoutSize: groupSize, repeatingSubitem: layoutItem, count: 2)
                 layoutGroup.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 10, bottom: 0, trailing: 0)
                 let layoutSection = NSCollectionLayoutSection(group: layoutGroup)
                 layoutSection.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 10, bottom: 0, trailing: 10)
