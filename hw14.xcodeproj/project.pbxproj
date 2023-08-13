@@ -56,15 +56,39 @@
 		681070462A88D0D400276671 /* hw14 */ = {
 			isa = PBXGroup;
 			children = (
+				6810705B2A88D1BD00276671 /* Delegates */,
+				6810705D2A88D21900276671 /* Views andControllers */,
+				6810705C2A88D20800276671 /* Other */,
+			);
+			path = hw14;
+			sourceTree = "<group>";
+		};
+		6810705B2A88D1BD00276671 /* Delegates */ = {
+			isa = PBXGroup;
+			children = (
 				681070472A88D0D400276671 /* AppDelegate.swift */,
 				681070492A88D0D400276671 /* SceneDelegate.swift */,
-				6810704B2A88D0D400276671 /* ViewController.swift */,
+			);
+			path = Delegates;
+			sourceTree = "<group>";
+		};
+		6810705C2A88D20800276671 /* Other */ = {
+			isa = PBXGroup;
+			children = (
 				6810704D2A88D0D400276671 /* Main.storyboard */,
 				681070502A88D0D500276671 /* Assets.xcassets */,
 				681070522A88D0D500276671 /* LaunchScreen.storyboard */,
 				681070552A88D0D500276671 /* Info.plist */,
 			);
-			path = hw14;
+			path = Other;
+			sourceTree = "<group>";
+		};
+		6810705D2A88D21900276671 /* Views andControllers */ = {
+			isa = PBXGroup;
+			children = (
+				6810704B2A88D0D400276671 /* ViewController.swift */,
+			);
+			path = "Views andControllers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
